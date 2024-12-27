@@ -1,0 +1,55 @@
+###################
+## Configuration ##
+###################
+sv_hostname "hyperia-rp built with custom framework"
+
+sets sv_projectName "[Hyperia Framework] hyperia-rp"
+sets sv_projectDesc "A custom built framework for HyperiaRP"
+
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+sets tags "default, deployer, roleplay, hyperia, custom"
+sets locale "root-AQ"
+
+sv_enforceGameBuild 3095 #mp2023_02 - The Chop Shop
+
+sv_licenseKey ""
+set steam_webApiKey ""
+
+sv_maxclients 48
+
+set resources_useSystemChat true
+
+#############
+## OxMySQL ##
+#############
+set mysql_connection_string "user=root;password=YOUR_PASSWORD;host=localhost;port=3306;database=DATABASE_NAME"
+
+#####################
+## Start Resources ##
+#####################
+## cfx default ##
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure basic-gamemode
+ensure hardcap
+
+## overextended ##
+ensure oxmysql
+ensure ox_lib
+
+## standalone ##
+ensure [standalone]
+
+## hyperia framework ##
+ensure [hyperia]
+
+####################
+## Ace Permission ##
+####################
+add_ace group.admin command allow # allow all commands
+add_ace group.admin command.quit deny # but don't allow quit
+add_principal identifier.fivem:15716075 group.admin #xjoshryann
