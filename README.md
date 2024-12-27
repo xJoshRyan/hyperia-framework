@@ -1,2 +1,2 @@
 # Hyperia Framework
-A custom FiveM RP Framework
+An open-source custom FiveM RP Framework
