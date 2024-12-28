@@ -14,6 +14,7 @@ files {
     'ui/index.html',
     'ui/app.js',
     'ui/styles.css',
+    'ui/images/*.png',
 }
 
 server_scripts{
