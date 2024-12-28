@@ -8,6 +8,14 @@ dependencies{
     'oxmysql'
 }
 
+ui_page 'ui/index.html'
+
+files {
+    'ui/index.html',
+    'ui/app.js',
+    'ui/styles.css',
+}
+
 server_scripts{
     '@oxmysql/lib/MySQL.lua',
     'server/main.lua',
